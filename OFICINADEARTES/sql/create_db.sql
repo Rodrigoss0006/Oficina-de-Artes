@@ -1,0 +1,11 @@
+-- Criação do banco e tabela
+CREATE DATABASE IF NOT EXISTS oficina_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE oficina_db;
+
+CREATE TABLE IF NOT EXISTS sobre (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(150) NOT NULL,
+  descricao TEXT NOT NULL,
+  foto_path VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
